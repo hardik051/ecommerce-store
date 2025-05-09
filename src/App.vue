@@ -1,3 +1,7 @@
 <template>
-  <h2>E-commerce Store</h2>
+  <BaseLayout />
 </template>
+
+<script setup lang="ts">
+import { BaseLayout } from './components/layout'
+</script>
