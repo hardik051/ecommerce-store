@@ -3,5 +3,5 @@
 </template>
 
 <script setup lang="ts">
-import { BaseLayout } from './components/layout'
+import { BaseLayout } from './layout'
 </script>

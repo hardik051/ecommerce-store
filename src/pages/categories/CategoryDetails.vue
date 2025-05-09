@@ -19,7 +19,7 @@ import { useRoute } from 'vue-router'
 
 import { PRODUCTS } from '../../data/products'
 import type { IProduct } from '../../types'
-import ProductGrid from '../../components/products/ProductGrid.vue'
+import { ProductGrid } from '@/components'
 
 const route = useRoute()
 const categoryId = route.params.categoryId as string

@@ -9,8 +9,7 @@
 
 <script lang="ts" setup>
 import { PRODUCTS } from '../../data/products'
-
-import ProductItem from '../../components/products/ProductItem.vue'
+import { ProductItem } from '@/components'
 </script>
 
 <style scoped>

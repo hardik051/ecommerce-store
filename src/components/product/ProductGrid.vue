@@ -8,9 +8,9 @@
 </template>
 
 <script lang="ts" setup>
-import ProductItem from '../../components/products/ProductItem.vue'
-import type { IProduct } from '../../types'
 import { type PropType } from 'vue'
+import type { IProduct } from '../../types'
+import { ProductItem } from '@/components'
 
 const props = defineProps({
   products: {
@@ -23,11 +23,6 @@ const { products } = props
 </script>
 
 <style scoped>
-.product-grid {
-  /* padding: 20px; */
-  /* border: 1px solid #d1d5db; */
-}
-
 .product-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));

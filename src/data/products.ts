@@ -1,13 +1,12 @@
 import type { IProduct } from '@/types'
 
 export const PRODUCTS: IProduct[] = [
-  // Books
   {
     id: 'book-001',
     name: 'The Great Gatsby',
     categoryId: 'books',
     price: 10.99,
-    image: 'https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp',
+    image: null,
     description: 'A classic novel by F. Scott Fitzgerald set in the Jazz Age.',
   },
   {
@@ -15,7 +14,7 @@ export const PRODUCTS: IProduct[] = [
     name: 'Sapiens: A Brief History of Humankind',
     categoryId: 'books',
     price: 14.99,
-    image: 'https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp',
+    image: null,
     description: 'Explores the history and impact of Homo sapiens.',
   },
   {
@@ -23,7 +22,7 @@ export const PRODUCTS: IProduct[] = [
     name: 'Atomic Habits',
     categoryId: 'books',
     price: 11.99,
-    image: 'https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp',
+    image: null,
     description: 'A guide to building good habits and breaking bad ones.',
   },
 
@@ -33,7 +32,7 @@ export const PRODUCTS: IProduct[] = [
     name: 'iPhone 14',
     categoryId: 'electronics',
     price: 799.99,
-    image: 'https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp',
+    image: null,
     description: 'Latest Apple smartphone with advanced features.',
   },
   {
@@ -41,7 +40,7 @@ export const PRODUCTS: IProduct[] = [
     name: 'Samsung Galaxy Buds 2',
     categoryId: 'electronics',
     price: 129.99,
-    image: 'https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp',
+    image: null,
     description: 'Wireless earbuds with noise cancellation.',
   },
   {
@@ -49,7 +48,7 @@ export const PRODUCTS: IProduct[] = [
     name: 'Anker Power Bank 20000mAh',
     categoryId: 'electronics',
     price: 49.99,
-    image: 'https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp',
+    image: null,
     description: 'High-capacity portable charger with fast charging support.',
   },
 
@@ -59,7 +58,7 @@ export const PRODUCTS: IProduct[] = [
     name: 'Men’s Casual T-Shirt',
     categoryId: 'clothing',
     price: 15.99,
-    image: 'https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp',
+    image: null,
     description: 'Comfortable cotton t-shirt available in various colors.',
   },
   {
@@ -67,7 +66,7 @@ export const PRODUCTS: IProduct[] = [
     name: 'Women’s Denim Jacket',
     categoryId: 'clothing',
     price: 39.99,
-    image: 'https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp',
+    image: null,
     description: 'Stylish and durable denim jacket for everyday wear.',
   },
   {
@@ -75,7 +74,7 @@ export const PRODUCTS: IProduct[] = [
     name: 'Kids’ Hoodie',
     categoryId: 'clothing',
     price: 25.99,
-    image: 'https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp',
+    image: null,
     description: 'Soft and warm hoodie for kids, available in multiple sizes.',
   },
 
@@ -85,7 +84,7 @@ export const PRODUCTS: IProduct[] = [
     name: 'Nonstick Frying Pan',
     categoryId: 'home',
     price: 24.99,
-    image: 'https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp',
+    image: null,
     description: 'Durable frying pan with nonstick coating for easy cooking.',
   },
   {
@@ -93,7 +92,7 @@ export const PRODUCTS: IProduct[] = [
     name: 'Robot Vacuum Cleaner',
     categoryId: 'home',
     price: 189.99,
-    image: 'https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp',
+    image: null,
     description: 'Smart vacuum that cleans your home automatically.',
   },
   {
@@ -101,7 +100,7 @@ export const PRODUCTS: IProduct[] = [
     name: 'Aroma Diffuser',
     categoryId: 'home',
     price: 29.99,
-    image: 'https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp',
+    image: null,
     description: 'Ultrasonic diffuser for essential oils and ambient lighting.',
   },
 
@@ -111,7 +110,7 @@ export const PRODUCTS: IProduct[] = [
     name: 'Hydrating Face Serum',
     categoryId: 'beauty',
     price: 19.99,
-    image: 'https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp',
+    image: null,
     description: 'Moisturizing serum with hyaluronic acid.',
   },
   {
@@ -119,7 +118,7 @@ export const PRODUCTS: IProduct[] = [
     name: 'Shampoo & Conditioner Set',
     categoryId: 'beauty',
     price: 12.99,
-    image: 'https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp',
+    image: null,
     description: 'Gentle formula for daily hair care.',
   },
   {
@@ -127,7 +126,7 @@ export const PRODUCTS: IProduct[] = [
     name: 'Electric Hair Trimmer',
     categoryId: 'beauty',
     price: 34.99,
-    image: 'https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp',
+    image: null,
     description: 'Rechargeable trimmer for precise grooming.',
   },
 
@@ -137,7 +136,7 @@ export const PRODUCTS: IProduct[] = [
     name: 'Yoga Mat',
     categoryId: 'sports',
     price: 19.99,
-    image: 'https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp',
+    image: null,
     description: 'Non-slip mat ideal for yoga and pilates.',
   },
   {
@@ -145,7 +144,7 @@ export const PRODUCTS: IProduct[] = [
     name: 'Adjustable Dumbbells',
     categoryId: 'sports',
     price: 89.99,
-    image: 'https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp',
+    image: null,
     description: 'Space-saving weight set for home workouts.',
   },
   {
@@ -153,7 +152,7 @@ export const PRODUCTS: IProduct[] = [
     name: 'Camping Tent for 2',
     categoryId: 'sports',
     price: 79.99,
-    image: 'https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp',
+    image: null,
     description: 'Waterproof and compact tent for outdoor adventures.',
   },
 
@@ -163,7 +162,7 @@ export const PRODUCTS: IProduct[] = [
     name: 'Lego Classic Brick Box',
     categoryId: 'toys',
     price: 29.99,
-    image: 'https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp',
+    image: null,
     description: 'Creative brick set for building and learning.',
   },
   {
@@ -171,7 +170,7 @@ export const PRODUCTS: IProduct[] = [
     name: 'Remote Control Car',
     categoryId: 'toys',
     price: 39.99,
-    image: 'https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp',
+    image: null,
     description: 'High-speed RC car with rechargeable battery.',
   },
   {
@@ -179,7 +178,7 @@ export const PRODUCTS: IProduct[] = [
     name: 'Board Game: Catan',
     categoryId: 'toys',
     price: 44.99,
-    image: 'https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp',
+    image: null,
     description: 'Popular strategy game for family game nights.',
   },
 
@@ -189,7 +188,7 @@ export const PRODUCTS: IProduct[] = [
     name: 'Car Phone Mount',
     categoryId: 'automotive',
     price: 15.99,
-    image: 'https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp',
+    image: null,
     description: 'Secure phone holder for dashboard or windshield.',
   },
   {
@@ -197,7 +196,7 @@ export const PRODUCTS: IProduct[] = [
     name: 'Tire Inflator Pump',
     categoryId: 'automotive',
     price: 29.99,
-    image: 'https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp',
+    image: null,
     description: 'Portable air compressor for car tires.',
   },
   {
@@ -205,7 +204,7 @@ export const PRODUCTS: IProduct[] = [
     name: 'Microfiber Car Cleaning Cloths',
     categoryId: 'automotive',
     price: 9.99,
-    image: 'https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp',
+    image: null,
     description: 'Soft and reusable cloths for streak-free cleaning.',
   },
 
@@ -215,7 +214,7 @@ export const PRODUCTS: IProduct[] = [
     name: 'Dog Chew Toy',
     categoryId: 'pets',
     price: 8.99,
-    image: 'https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp',
+    image: null,
     description: 'Durable rubber toy for aggressive chewers.',
   },
   {
@@ -223,7 +222,7 @@ export const PRODUCTS: IProduct[] = [
     name: 'Cat Scratching Post',
     categoryId: 'pets',
     price: 22.99,
-    image: 'https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp',
+    image: null,
     description: 'Helps keep your cat’s claws healthy and your furniture safe.',
   },
   {
@@ -231,7 +230,7 @@ export const PRODUCTS: IProduct[] = [
     name: 'Pet Grooming Brush',
     categoryId: 'pets',
     price: 13.99,
-    image: 'https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp',
+    image: null,
     description: 'Removes loose fur and detangles for dogs and cats.',
   },
 
@@ -241,7 +240,7 @@ export const PRODUCTS: IProduct[] = [
     name: 'Ergonomic Office Chair',
     categoryId: 'office',
     price: 149.99,
-    image: 'https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp',
+    image: null,
     description: 'Supportive chair with lumbar support and adjustable height.',
   },
   {
@@ -249,7 +248,7 @@ export const PRODUCTS: IProduct[] = [
     name: 'Wireless Printer',
     categoryId: 'office',
     price: 89.99,
-    image: 'https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp',
+    image: null,
     description: 'All-in-one inkjet printer with wireless connectivity.',
   },
   {
@@ -257,7 +256,7 @@ export const PRODUCTS: IProduct[] = [
     name: 'Desk Organizer Set',
     categoryId: 'office',
     price: 24.99,
-    image: 'https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp',
+    image: null,
     description: 'Keeps pens, papers, and accessories neatly arranged.',
   },
 ]

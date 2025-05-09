@@ -3,9 +3,11 @@
     <h1>E-Commerce Store</h1>
     <nav>
       <RouterLink to="/"> Home </RouterLink>
-      <RouterLink to="/categories"> Categories </RouterLink>
+      <RouterLink to="/categories" exact-active-class="router-link-active" :exact="false">
+        Categories
+      </RouterLink>
       <RouterLink to="/products"> Products </RouterLink>
-      <RouterLink to="/cart"> 🛒 </RouterLink>
+      <RouterLink to="/cart" class="cart-icon"> 🛒 </RouterLink>
     </nav>
   </header>
 </template>
@@ -57,6 +59,16 @@ nav a:hover {
 
 nav a:hover::after {
   width: 100%;
+}
+
+nav .cart-icon {
+  font-size: 1.5rem;
+  color: #ffffff;
+  transition: color 0.3s;
+}
+
+nav .cart-icon:hover {
+  color: #ffffff;
 }
 
 /* Active route styling */

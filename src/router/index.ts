@@ -1,8 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import NotFound from '@/pages/NotFound.vue'
-import { ProductDetail, ProductList } from '@/pages/products'
-import { CategoryDetails, CategoryList } from '@/pages/categories'
+import {
+  Cart,
+  CategoryDetails,
+  CategoryList,
+  HomePage,
+  NotFound,
+  ProductDetail,
+  ProductList,
+} from '@/pages'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -10,24 +16,16 @@ const router = createRouter({
     {
       name: 'home',
       path: '/',
-      component: CategoryList,
+      component: HomePage,
     },
     {
       name: 'categories',
       path: '/categories',
       component: CategoryList,
-      // children: [
-      //   {
-      //     path: ':categoryId',
-      //     name: 'category',
-      //     component: CategoryDetails,
-      //     // props: true,
-      //   },
-      // ],
     },
     {
-      path: '/category/:categoryId',
       name: 'category',
+      path: '/categories/:categoryId',
       component: CategoryDetails,
     },
     {
@@ -42,6 +40,11 @@ const router = createRouter({
           props: true,
         },
       ],
+    },
+    {
+      name: 'cart',
+      path: '/cart',
+      component: Cart,
     },
     { path: '/:notFound(.*)', component: NotFound },
   ],

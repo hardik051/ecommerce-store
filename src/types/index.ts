@@ -10,5 +10,15 @@ export interface IProduct {
   categoryId: string
   description: string
   price: number
-  image: string
+  image: string | null
+}
+
+export interface ICartItem extends IProduct {
+  quantity: number
+}
+export interface ICart {
+  quantities: number
+  items: ICartItem[]
+  totalPrice: number
+  totalItems: number
 }

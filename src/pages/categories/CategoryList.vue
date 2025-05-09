@@ -9,8 +9,8 @@
 </template>
 
 <script lang="ts" setup>
-import CategoryItem from '../../components/category/CategoryItem.vue'
 import { CATEGORIES } from '../../data/categories'
+import { CategoryItem } from '@/components'
 </script>
 
 <style scoped>
