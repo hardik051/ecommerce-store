@@ -1,16 +1,16 @@
 <template>
-  <div id="app">
-    <TheHeader />
-    <main>
-      <RouterView />
-    </main>
-    <TheFooter />
-  </div>
+  <UApp>
+    <div id="app">
+      <TheHeader />
+      <main>
+        <RouterView />
+      </main>
+    </div>
+  </UApp>
 </template>
 
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
-
 import TheHeader from './TheHeader.vue'
 </script>
 
