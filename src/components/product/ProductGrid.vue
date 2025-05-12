@@ -1,6 +1,5 @@
 <template>
   <div class="product-grid">
-    <!-- <h1>Products</h1> -->
     <div class="product-list">
       <ProductItem v-for="product in products" :key="product.id" :product="product" />
     </div>
@@ -10,7 +9,7 @@
 <script lang="ts" setup>
 import { type PropType } from 'vue'
 import type { IProduct } from '../../types'
-import { ProductItem } from '@/components'
+import { ProductItem } from '../../components'
 
 const props = defineProps({
   products: {

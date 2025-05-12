@@ -1,5 +1,5 @@
 <template>
-  <div class="home-page">
+  <div class="flex flex-col gap-6">
     <CategoryList />
     <ProductList />
   </div>

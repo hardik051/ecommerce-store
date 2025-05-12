@@ -1,54 +1,46 @@
-import { ref } from 'vue'
-import type { ICart, ICartItem } from '@/types'
+import type { ICartItem } from '@/types'
+import { loadFromLocalStorage, saveToLocalStorage } from '@/utils'
+import { defineStore } from 'pinia'
 
-const defaultCart: ICart = {
-  quantities: 0,
-  items: [],
-  totalPrice: 0,
-  totalItems: 0,
-}
+export const useCartStore = defineStore('cart', {
+  state: () => ({ cartItems: [] as ICartItem[] }),
 
-const cart = ref<ICart>(defaultCart)
+  getters: {
+    itemCount: (state) => state.cartItems.reduce((sum, item) => sum + item.quantity, 0),
+    totalItems: (state) => state.cartItems.length,
+  },
 
-const isCartExist = localStorage.getItem('cart')
+  actions: {
+    loadCart() {
+      const data = loadFromLocalStorage<ICartItem[]>('cart')
+      if (data) this.cartItems = data
+    },
 
-if (isCartExist) {
-  const cartData = JSON.parse(isCartExist)
-  cart.value = cartData
-}
+    saveCart() {
+      saveToLocalStorage('cart', this.cartItems)
+    },
 
-function updateCartSummary() {
-  cart.value.totalItems = cart.value.items.length
-  cart.value.quantities = cart.value.items.reduce((sum, item) => sum + item.quantity, 0)
-  cart.value.totalPrice = cart.value.items.reduce(
-    (sum, item) => sum + item.price * item.quantity,
-    0,
-  )
-}
+    addToCart(productId: string) {
+      const item = this.cartItems.find((i) => i.id === productId)
+      if (item) item.quantity++
+      else this.cartItems.push({ id: productId, quantity: 1 })
+      this.saveCart()
+    },
 
-function addToCart(item: ICartItem) {
-  const existingItem = cart?.value?.items.find((cartItem: ICartItem) => cartItem.id === item.id)
-  if (existingItem) {
-    existingItem.quantity += 1
-    cart.value.quantities += 1
-    cart.value.totalPrice += item.price
-    cart.value.totalItems += 1
-  } else {
-    cart.value.items.push(item)
-  }
+    decrementItem(productId: string) {
+      const index = this.cartItems.findIndex((item) => item.id === productId)
+      if (index !== -1) {
+        const item = this.cartItems[index]
+        if (item.quantity > 1) item.quantity--
+        else this.cartItems.splice(index, 1)
 
-  updateCartSummary()
-}
+        this.saveCart()
+      }
+    },
 
-function clearCart() {
-  localStorage.removeItem('cart')
-  cart.value = defaultCart
-}
-
-export const useCart = () => {
-  return {
-    cart,
-    addToCart,
-    clearCart,
-  }
-}
+    removeFromCart(productId: string) {
+      this.cartItems = this.cartItems.filter((i) => i.id !== productId)
+      this.saveCart()
+    },
+  },
+})

@@ -1,14 +1,21 @@
 <template>
   <router-link
     :to="{ name: 'category', params: { categoryId: category.id }, query: { name: category.name } }"
-    class="category-card"
+    class="block transition-shadow hover:shadow-lg rounded-lg"
   >
-    <h2 class="category-title">{{ category.name }}</h2>
-    <p class="category-description">{{ category.description }}</p>
+    <n-card hoverable class="category-card shadow-sm border border-gray-200 rounded-2xl">
+      <h2 class="text-xl font-semibold text-[#1f2937]">
+        {{ category.name }}
+      </h2>
+      <p class="text-gray-600 mt-2">
+        {{ category.description }}
+      </p>
+    </n-card>
   </router-link>
 </template>
 
 <script setup lang="ts">
+import { NCard } from 'naive-ui'
 import type { ICategory } from '../../types'
 import { defineProps, type PropType } from 'vue'
 
@@ -21,32 +28,3 @@ const props = defineProps({
 
 const { category } = props
 </script>
-
-<style scoped>
-.category-card {
-  display: block;
-  padding: 16px;
-  background-color: white;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  text-decoration: none;
-  color: inherit;
-  transition: box-shadow 0.2s ease;
-}
-
-.category-card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-.category-title {
-  font-size: 1.1rem;
-  font-weight: bold;
-  margin-bottom: 8px;
-  /* color: #555; */
-}
-
-.category-description {
-  font-size: 0.95rem;
-  color: #555;
-}
-</style>

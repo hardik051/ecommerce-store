@@ -1,25 +1,30 @@
 <template>
-  <di class="category-page" v>
-    <nav class="breadcrumb">
-      <router-link to="/">Home</router-link>
-      <span> / </span>
-      <router-link to="/categories">Categories</router-link>
-      <span> /</span>
-      <span class="current">{{ categoryName }}</span>
-    </nav>
-    <h1 class="category-title">{{ categoryName }}</h1>
+  <div class="flex flex-col gap-5">
+    <n-breadcrumb separator=" / ">
+      <n-breadcrumb-item>
+        <router-link to="/">Home</router-link>
+      </n-breadcrumb-item>
+      <n-breadcrumb-item>
+        <router-link to="/categories">Categories</router-link>
+      </n-breadcrumb-item>
+      <n-breadcrumb-item>
+        {{ categoryName }}
+      </n-breadcrumb-item>
+    </n-breadcrumb>
+
+    <h1 class="text-3xl font-medium text-[#1f2937]">{{ categoryName }}</h1>
 
     <ProductGrid :products="filteredProducts" />
-  </di>
+  </div>
 </template>
 
 <script lang="ts" setup>
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
-
+import { NBreadcrumb, NBreadcrumbItem } from 'naive-ui'
 import { PRODUCTS } from '../../data/products'
 import type { IProduct } from '../../types'
-import { ProductGrid } from '@/components'
+import { ProductGrid } from '../../components'
 
 const route = useRoute()
 const categoryId = route.params.categoryId as string
@@ -29,34 +34,3 @@ const filteredProducts = computed(() => {
   return PRODUCTS.filter((product: IProduct) => product.categoryId === categoryId)
 })
 </script>
-
-<style scoped>
-.category-page {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.breadcrumb {
-  font-size: 1.2rem;
-  color: #555;
-  margin-bottom: 10px;
-}
-
-.breadcrumb a {
-  text-decoration: none;
-  color: #10b981;
-}
-
-.breadcrumb .current {
-  color: #111;
-  margin-left: 4px;
-}
-
-.category-title {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-  color: #111;
-}
-</style>

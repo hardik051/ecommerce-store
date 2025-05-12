@@ -46,8 +46,10 @@ const router = createRouter({
       path: '/cart',
       component: Cart,
     },
+
     { path: '/:notFound(.*)', component: NotFound },
   ],
+  linkActiveClass: 'active-link',
 })
 
 export default router
