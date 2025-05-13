@@ -13,8 +13,7 @@ export interface IProduct {
   image: string | null
 }
 
-export interface ICartItem  {
-  id: string
+export interface ICartItem extends IProduct {
   quantity: number
 }
 export interface ICart {

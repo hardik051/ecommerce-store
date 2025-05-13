@@ -8,14 +8,16 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    CartItem: typeof import('./src/components/cart/CartItem.vue')['default']
+    CartList: typeof import('./src/components/cart/CartList.vue')['default']
     CategoryItem: typeof import('./src/components/category/CategoryItem.vue')['default']
+    EmptyCart: typeof import('./src/components/cart/EmptyCart.vue')['default']
+    OrderSummary: typeof import('./src/components/orderSummary/orderSummary.vue')['default']
     ProductGrid: typeof import('./src/components/product/ProductGrid.vue')['default']
     ProductItem: typeof import('./src/components/product/ProductItem.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     UApp: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/App.vue')['default']
-    UButton: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Button.vue')['default']
-    UCard: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Card.vue')['default']
     ULinkBase: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/LinkBase.vue')['default']
   }
 }

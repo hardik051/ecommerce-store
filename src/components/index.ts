@@ -1,3 +1,7 @@
 export { default as CategoryItem } from './category/CategoryItem.vue'
 export { default as ProductGrid } from './product/ProductGrid.vue'
 export { default as ProductItem } from './product/ProductItem.vue'
+export { default as CartItem } from './cart/CartItem.vue'
+export { default as CartList } from './cart/CartList.vue'
+export { default as OrderSummary } from './orderSummary/OrderSummary.vue'
+export { default as EmptyCart } from './cart/EmptyCart.vue'

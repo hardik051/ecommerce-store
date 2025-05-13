@@ -11,6 +11,6 @@
 </template>
 
 <script lang="ts" setup>
-import { PRODUCTS } from '../../data/products'
+import { PRODUCTS } from '@/data/products'
 import { ProductItem } from '../../components'
 </script>

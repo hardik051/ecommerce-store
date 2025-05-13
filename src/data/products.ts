@@ -1,3 +1,20 @@
+import {
+  airBudsImg,
+  iphone14Img,
+  powerBankImg,
+  theGateGatsbyImg,
+  sapiensImg,
+  atomicHabitsImg,
+  menTShirtImg,
+  womenDenimJacketImg,
+  kidHoodieImg,
+  nonstickFryingPanImg,
+  robotVacuumCleanerImg,
+  aromaDiffuserImg,
+  hydratingFaceSerumImg,
+  shampooSetImg,
+  electricHairTrimmerImg,
+} from '@/assets/images'
 import type { IProduct } from '@/types'
 
 export const PRODUCTS: IProduct[] = [
@@ -6,7 +23,7 @@ export const PRODUCTS: IProduct[] = [
     name: 'The Great Gatsby',
     categoryId: 'books',
     price: 10.99,
-    image: null,
+    image: theGateGatsbyImg,
     description: 'A classic novel by F. Scott Fitzgerald set in the Jazz Age.',
   },
   {
@@ -14,7 +31,7 @@ export const PRODUCTS: IProduct[] = [
     name: 'Sapiens: A Brief History of Humankind',
     categoryId: 'books',
     price: 14.99,
-    image: null,
+    image: sapiensImg,
     description: 'Explores the history and impact of Homo sapiens.',
   },
   {
@@ -22,7 +39,7 @@ export const PRODUCTS: IProduct[] = [
     name: 'Atomic Habits',
     categoryId: 'books',
     price: 11.99,
-    image: null,
+    image: atomicHabitsImg,
     description: 'A guide to building good habits and breaking bad ones.',
   },
 
@@ -32,7 +49,7 @@ export const PRODUCTS: IProduct[] = [
     name: 'iPhone 14',
     categoryId: 'electronics',
     price: 799.99,
-    image: null,
+    image: iphone14Img,
     description: 'Latest Apple smartphone with advanced features.',
   },
   {
@@ -40,7 +57,7 @@ export const PRODUCTS: IProduct[] = [
     name: 'Samsung Galaxy Buds 2',
     categoryId: 'electronics',
     price: 129.99,
-    image: null,
+    image: airBudsImg,
     description: 'Wireless earbuds with noise cancellation.',
   },
   {
@@ -48,7 +65,7 @@ export const PRODUCTS: IProduct[] = [
     name: 'Anker Power Bank 20000mAh',
     categoryId: 'electronics',
     price: 49.99,
-    image: null,
+    image: powerBankImg,
     description: 'High-capacity portable charger with fast charging support.',
   },
 
@@ -58,7 +75,7 @@ export const PRODUCTS: IProduct[] = [
     name: 'Men’s Casual T-Shirt',
     categoryId: 'clothing',
     price: 15.99,
-    image: null,
+    image: menTShirtImg,
     description: 'Comfortable cotton t-shirt available in various colors.',
   },
   {
@@ -66,7 +83,7 @@ export const PRODUCTS: IProduct[] = [
     name: 'Women’s Denim Jacket',
     categoryId: 'clothing',
     price: 39.99,
-    image: null,
+    image: womenDenimJacketImg,
     description: 'Stylish and durable denim jacket for everyday wear.',
   },
   {
@@ -74,7 +91,7 @@ export const PRODUCTS: IProduct[] = [
     name: 'Kids’ Hoodie',
     categoryId: 'clothing',
     price: 25.99,
-    image: null,
+    image: kidHoodieImg,
     description: 'Soft and warm hoodie for kids, available in multiple sizes.',
   },
 
@@ -84,7 +101,7 @@ export const PRODUCTS: IProduct[] = [
     name: 'Nonstick Frying Pan',
     categoryId: 'home',
     price: 24.99,
-    image: null,
+    image: nonstickFryingPanImg,
     description: 'Durable frying pan with nonstick coating for easy cooking.',
   },
   {
@@ -92,7 +109,7 @@ export const PRODUCTS: IProduct[] = [
     name: 'Robot Vacuum Cleaner',
     categoryId: 'home',
     price: 189.99,
-    image: null,
+    image: robotVacuumCleanerImg,
     description: 'Smart vacuum that cleans your home automatically.',
   },
   {
@@ -100,7 +117,7 @@ export const PRODUCTS: IProduct[] = [
     name: 'Aroma Diffuser',
     categoryId: 'home',
     price: 29.99,
-    image: null,
+    image: aromaDiffuserImg,
     description: 'Ultrasonic diffuser for essential oils and ambient lighting.',
   },
 
@@ -110,7 +127,7 @@ export const PRODUCTS: IProduct[] = [
     name: 'Hydrating Face Serum',
     categoryId: 'beauty',
     price: 19.99,
-    image: null,
+    image: hydratingFaceSerumImg,
     description: 'Moisturizing serum with hyaluronic acid.',
   },
   {
@@ -118,7 +135,7 @@ export const PRODUCTS: IProduct[] = [
     name: 'Shampoo & Conditioner Set',
     categoryId: 'beauty',
     price: 12.99,
-    image: null,
+    image: shampooSetImg,
     description: 'Gentle formula for daily hair care.',
   },
   {
@@ -126,7 +143,7 @@ export const PRODUCTS: IProduct[] = [
     name: 'Electric Hair Trimmer',
     categoryId: 'beauty',
     price: 34.99,
-    image: null,
+    image: electricHairTrimmerImg,
     description: 'Rechargeable trimmer for precise grooming.',
   },
 

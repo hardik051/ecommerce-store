@@ -1,12 +1,10 @@
 <template>
-  <UApp>
-    <div id="app">
-      <TheHeader />
-      <main>
-        <RouterView />
-      </main>
-    </div>
-  </UApp>
+  <div id="app">
+    <TheHeader />
+    <main>
+      <RouterView />
+    </main>
+  </div>
 </template>
 
 <script setup lang="ts">
