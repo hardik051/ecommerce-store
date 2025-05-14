@@ -39,7 +39,7 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, defineProps, type PropType } from 'vue'
+import { computed, type PropType } from 'vue'
 import { NButton, NImage, NCard } from 'naive-ui'
 import { useCartStore } from '../../store/cart'
 import type { ICartItem, IProduct } from '../../types'

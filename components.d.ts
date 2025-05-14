@@ -8,11 +8,14 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    BaseIcon: typeof import('./src/components/base/BaseIcon.vue')['default']
     CartItem: typeof import('./src/components/cart/CartItem.vue')['default']
+    CartItemList: typeof import('./src/components/cart/CartItemList.vue')['default']
     CartList: typeof import('./src/components/cart/CartList.vue')['default']
     CategoryItem: typeof import('./src/components/category/CategoryItem.vue')['default']
+    CheckoutForm: typeof import('./src/components/checkout/CheckoutForm.vue')['default']
     EmptyCart: typeof import('./src/components/cart/EmptyCart.vue')['default']
-    OrderSummary: typeof import('./src/components/orderSummary/orderSummary.vue')['default']
+    OrderSummary: typeof import('./src/components/orderSummary/OrderSummary.vue')['default']
     ProductGrid: typeof import('./src/components/product/ProductGrid.vue')['default']
     ProductItem: typeof import('./src/components/product/ProductItem.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']

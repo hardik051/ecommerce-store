@@ -8,10 +8,13 @@ export const useCartStore = defineStore('cart', {
   getters: {
     itemCount: (state) => state.cartItems.reduce((sum, item) => sum + item.quantity, 0),
     totalItems: (state) => state.cartItems.length,
-    totalAmount: (state) =>
-      state.cartItems.reduce((total, item) => {
+    totalAmount: (state) => {
+      const total = state.cartItems.reduce((total, item) => {
         return total + item.price * item.quantity
-      }, 0),
+      }, 0)
+
+      return total.toFixed(2)
+    },
   },
 
   actions: {

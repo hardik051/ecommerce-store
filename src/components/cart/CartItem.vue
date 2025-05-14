@@ -1,6 +1,6 @@
 <template>
   <div class="w-full flex items-start justify-between text-lg font-medium text-gray-400 relative">
-    <div class="w-[45%] h-30 flex gap-5">
+    <div class="w-[44%] h-30 flex gap-5">
       <div
         class="w-[130px] min-w-[130px] p-3 bg-gray-100 flex items-center justify-center rounded-md"
       >
@@ -18,15 +18,15 @@
         <p class="text-lg font-medium text-gray-800 line-clamp-1">{{ name }}</p>
       </div>
     </div>
-    <div class="w-[20%] py-2 flex justify-center items-center gap-2">
+    <div class="w-[18%] py-2 flex justify-center items-center gap-2">
       <n-button @click="decrementCartItem" type="primary" ghost>-</n-button>
       <span class="text-lg font-medium text-gray-700">{{ cartItem.quantity }}</span>
       <n-button @click="incrementCartItem" type="primary" ghost>+</n-button>
     </div>
-    <div class="w-[14%] py-2 flex justify-center text-base font-medium text-gray-800">
+    <div class="w-[16%] py-2 flex justify-center text-base font-medium text-gray-800">
       {{ itemPrice }}
     </div>
-    <div class="w-[14%] h-full py-2 flex justify-end text-base font-medium text-gray-800">
+    <div class="w-[15%] h-full py-2 flex justify-end text-base font-medium text-gray-800">
       <p>
         {{ itemTotal }}
       </p>

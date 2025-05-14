@@ -4,6 +4,7 @@ import {
   Cart,
   CategoryDetails,
   CategoryList,
+  CheckoutPage,
   HomePage,
   NotFound,
   ProductDetail,
@@ -46,7 +47,11 @@ const router = createRouter({
       path: '/cart',
       component: Cart,
     },
-
+    {
+      name: 'checkout',
+      path: '/checkout',
+      component: CheckoutPage,
+    },
     { path: '/:notFound(.*)', component: NotFound },
   ],
   linkActiveClass: 'active-link',

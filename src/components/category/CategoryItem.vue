@@ -17,7 +17,7 @@
 <script setup lang="ts">
 import { NCard } from 'naive-ui'
 import type { ICategory } from '../../types'
-import { defineProps, type PropType } from 'vue'
+import { type PropType } from 'vue'
 
 const props = defineProps({
   category: {

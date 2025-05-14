@@ -26,3 +26,7 @@ cartStore.loadCart()
 
 // Mount to DOM
 app.mount('#app')
+
+/*
+| Step 1: Validate input data |
+*/
