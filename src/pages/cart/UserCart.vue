@@ -1,3 +1,38 @@
+<script setup lang="ts">
+import { computed } from 'vue'
+import { CartItemList, OrderSummary } from '@/components'
+import { useCartStore } from '@/store/cart'
+import { NCard } from 'naive-ui'
+import { storeToRefs } from 'pinia'
+import { useRouter } from 'vue-router'
+
+/*
+|------------------------------|
+| Initialize Store             |
+|------------------------------|
+*/
+const cartStore = useCartStore()
+const { totalItems } = storeToRefs(cartStore)
+const router = useRouter()
+
+/*
+|------------------------------|
+| Declare Computed Properties  |
+|------------------------------|
+*/
+const cartItemsLabel = computed(() => `${totalItems.value} Items`)
+const isCartEmpty = computed(() => !totalItems.value)
+
+/*
+|------------------------------|
+| Define Functions              |
+|------------------------------|
+*/
+const gotoCheckout = () => {
+  router.push('/checkout')
+}
+</script>
+
 <template>
   <n-card
     embedded
@@ -22,33 +57,3 @@
     </div>
   </n-card>
 </template>
-
-<script setup lang="ts">
-import { computed } from 'vue'
-import { CartItemList, OrderSummary, EmptyCart } from '@/components'
-import { useCartStore } from '@/store/cart'
-import { NCard } from 'naive-ui'
-import { storeToRefs } from 'pinia'
-import { useRouter } from 'vue-router'
-
-/*
-|------------------------------|
-| Initialize Store             |
-|------------------------------|
-*/
-const cartStore = useCartStore()
-const { totalItems } = storeToRefs(cartStore)
-const router = useRouter()
-
-/*
-|------------------------------|
-| Declare Computed Properties  |
-|------------------------------|
-*/
-const cartItemsLabel = computed(() => `${totalItems.value} Items`)
-const isCartEmpty = computed(() => !totalItems.value)
-
-const gotoCheckout = () => {
-  router.push('/checkout')
-}
-</script>

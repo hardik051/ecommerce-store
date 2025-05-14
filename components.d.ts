@@ -8,10 +8,11 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    BaseCheckbox: typeof import('./src/components/base/BaseCheckbox.vue')['default']
     BaseIcon: typeof import('./src/components/base/BaseIcon.vue')['default']
+    BaseInput: typeof import('./src/components/base/BaseInput.vue')['default']
     CartItem: typeof import('./src/components/cart/CartItem.vue')['default']
     CartItemList: typeof import('./src/components/cart/CartItemList.vue')['default']
-    CartList: typeof import('./src/components/cart/CartList.vue')['default']
     CategoryItem: typeof import('./src/components/category/CategoryItem.vue')['default']
     CheckoutForm: typeof import('./src/components/checkout/CheckoutForm.vue')['default']
     EmptyCart: typeof import('./src/components/cart/EmptyCart.vue')['default']
@@ -20,7 +21,5 @@ declare module 'vue' {
     ProductItem: typeof import('./src/components/product/ProductItem.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    UApp: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/App.vue')['default']
-    ULinkBase: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/LinkBase.vue')['default']
   }
 }

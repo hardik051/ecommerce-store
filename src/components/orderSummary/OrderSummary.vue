@@ -1,3 +1,49 @@
+<script lang="ts" setup>
+import { useCartStore } from '@/store/cart'
+import { NButton } from 'naive-ui'
+import { computed } from 'vue'
+
+/*
+|------------------------------|
+| Define props                  |
+|------------------------------|
+*/
+defineProps({
+  btnLabel: {
+    type: String,
+    required: false,
+    default: 'Checkout',
+  },
+})
+
+/*
+|------------------------------|
+| Initialize Store             |
+|------------------------------|
+*/
+const cartStore = useCartStore()
+const totalAmount = computed(() => cartStore.totalAmount)
+const totalItems = computed(() => cartStore.totalItems)
+
+/*
+|------------------------------|
+| Define Emits                  |
+|------------------------------|
+*/
+const emit = defineEmits<{
+  (event: 'btnClicked'): void
+}>()
+
+/*
+|------------------------------|
+| Define Methods                |
+|------------------------------|
+*/
+const handleBtnClick = () => {
+  emit('btnClicked')
+}
+</script>
+
 <template>
   <div class="w-[30%] h-full flex flex-col gap-6 bg-gray-100 py-10 px-6">
     <div class="w-full flex justify-between">
@@ -39,49 +85,7 @@
       <p class="text-xl font-bold text-gray-800">${{ totalAmount }}</p>
     </div>
     <n-button type="primary" class="w-full h-8" ghost @click="handleBtnClick">{{
-      props.btnLabel
+      btnLabel
     }}</n-button>
   </div>
 </template>
-
-<script lang="ts" setup>
-import { useCartStore } from '@/store/cart'
-import { NButton } from 'naive-ui'
-import { computed } from 'vue'
-
-/*
-|------------------------------|
-| Define props                  |
-|------------------------------|
-*/
-
-const props = defineProps({
-  btnLabel: {
-    type: String,
-    required: false,
-    default: 'Checkout',
-  },
-})
-
-/*
-|------------------------------|
-| Initialize Store             |
-|------------------------------|
-*/
-const cartStore = useCartStore()
-const totalAmount = computed(() => cartStore.totalAmount)
-const totalItems = computed(() => cartStore.totalItems)
-
-/*
-|------------------------------|
-| Define Methods                |
-|------------------------------|
-*/
-const emit = defineEmits<{
-  (event: 'btnClicked'): void
-}>()
-
-const handleBtnClick = () => {
-  emit('btnClicked')
-}
-</script>

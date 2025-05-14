@@ -1,3 +1,16 @@
+<script lang="ts" setup>
+import { type PropType } from 'vue'
+import type { IProduct } from '../../types'
+import { ProductItem } from '../../components'
+
+defineProps({
+  products: {
+    type: Array as PropType<IProduct[]>,
+    required: true,
+  },
+})
+</script>
+
 <template>
   <div class="product-grid">
     <div class="product-list">
@@ -5,21 +18,6 @@
     </div>
   </div>
 </template>
-
-<script lang="ts" setup>
-import { type PropType } from 'vue'
-import type { IProduct } from '../../types'
-import { ProductItem } from '../../components'
-
-const props = defineProps({
-  products: {
-    type: Array as PropType<IProduct[]>,
-    required: true,
-  },
-})
-
-const { products } = props
-</script>
 
 <style scoped>
 .product-list {

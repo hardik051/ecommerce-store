@@ -6,7 +6,7 @@ import { Icon } from '@iconify/vue'
 | Define Props                  |
 |------------------------------|
 */
-const { icon, width, height, customClass, customStyle } = defineProps({
+defineProps({
   icon: {
     type: String,
     required: true,
@@ -27,13 +27,18 @@ const { icon, width, height, customClass, customStyle } = defineProps({
 
 /*
 |------------------------------|
-| Define Methods                |
+| Define Emits                  |
 |------------------------------|
 */
 const emit = defineEmits<{
   (event: 'iconClicked'): void
 }>()
 
+/*
+|------------------------------|
+| Define Functions              |
+|------------------------------|
+*/
 const handleIconClick = () => {
   emit('iconClicked')
 }
