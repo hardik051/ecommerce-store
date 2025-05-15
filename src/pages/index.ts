@@ -1,0 +1,8 @@
+export { default as ProductList } from './products/ProductList.vue'
+export { default as ProductDetail } from './products/ProductDetails.vue'
+export { default as CategoryList } from './categories/CategoryList.vue'
+export { default as CategoryDetails } from './categories/CategoryDetails.vue'
+export { default as Cart } from './cart/UserCart.vue'
+export { default as NotFound } from './NotFound.vue'
+export { default as HomePage } from './home/HomePage.vue'
+export { default as CheckoutPage } from './checkout/CheckoutPage.vue'

@@ -33,3 +33,8 @@ coverage
 yarn.lock
 package-lock.json
 pnpm-lock.yaml
+
+
+# Auto-generated type declarations
+auto-imports.d.ts
+components.d.ts
